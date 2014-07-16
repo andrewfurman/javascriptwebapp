@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>javascriptwebapp</title>
+
+  <link rel="stylesheet" href="styles.css">
+  
+    <!-- THe rest fo the head was coppied over from google maps -->
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <style type="text/css">
+      html { height: 500px }
+      body { height: 500px; margin: 0; padding: 0 }
+      #map-canvas { height: 100% }
+    </style>
+    <script type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDX1MjBI5mhJGqnEPdrsMumd8Xvf2k5iKY">
+    </script>
+    <script type="text/javascript">
+      alert("started");
+      function initialize() {
+        var mapOptions = {
+          center: new google.maps.LatLng(-34.397, 150.644),
+          zoom: 8
+        };
+        var map = new google.maps.Map(document.getElementById("map-canvas"),
+            mapOptions);
+      }
+      google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+</head>
+
+<body>
+  <div id="greeting"></div>
+  <div id="map-canvas"/>
+  <script src="main.js"></script> 
+</body>
+</html>
